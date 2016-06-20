@@ -1,0 +1,80 @@
+
+<SCRIPT language="javascript" type="text/javascript">
+var DHCPDynList = new Array(
+"zhaonade-iPad", "F0-F6-1C-B6-02-7B", "192.168.1.106", "01:28:56",
+"Redmi3-hongmishouji", "B0-E2-35-D7-4D-E2", "192.168.1.103", "01:34:34",
+"iPhone", "20-A2-E4-5B-2C-16", "192.168.1.100", "01:24:33",
+"MIPAD-xiaomipingban", "0C-1D-AF-5A-5F-CE", "192.168.1.105", "01:34:37",
+"android-b7bb9aaf5f1484b8", "88-E3-AB-B7-2F-26", "192.168.1.101", "01:29:47",
+"doujiaiPad", "74-81-14-5B-93-D1", "192.168.1.107", "01:07:12",
+"QINGZHLI-CN", "7C-7A-91-C9-CD-59", "192.168.1.102", "01:32:17",
+0,0 );
+</SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+var DHCPDynPara = new Array(
+7,
+4,
+0,0 );
+</SCRIPT>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<HTML>
+<HEAD><TITLE>TL-WR840N</TITLE>
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
+<LINK href="/dynaform/css_main.css" rel=stylesheet type="text/css">
+<SCRIPT language="javascript" src="/dynaform/common.js" type="text/javascript"></SCRIPT>
+<SCRIPT language="javascript" type="text/javascript"><!--
+if(window.parent == window){window.location.href="http://192.168.1.1";}
+function Click(){ return false;}
+document.oncontextmenu=Click;
+//--></SCRIPT>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+</head>
+<body>
+<center><form action="AssignedIpAddrListRpm.htm" enctype="multipart/form-data" method="get">
+<!--外框表格-->
+<table width="540" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="7" class="title"><img src="/images/arc.gif" width="7" height="24"></td>
+<td width="530" align="left" valign="middle" class="title">客户端列表</td>
+</tr><tr><td colspan="2"><table width="540" border="0" cellspacing="0" cellpadding="0">
+<tr><td class="vline" rowspan="15"><br></td>
+<td width="538">
+<!--内容开始-->
+<table width="500" border="0" align="center" cellpadding="0" cellspacing="0" class="space">
+<tr><td align="center" width="500">
+<!-- added, -->
+<script language="JavaScript">
+if (DHCPDynPara[0] > 0)	{
+var row = 0;
+var i = 0;
+var j;
+document.write('<TR><TD><table border=1 align="center" cellpadding="0" cellspacing="0" class="space">');
+document.write('<TR align="center"><TD width="30">ID</TD><TD >客户端名</TD><td width="120" nowrap>MAC 地址</td><TD width="90" nowrap>IP 地址</TD><TD >有效时间</TD></TR>');
+for(i = 0; i < DHCPDynPara[0]; i++)
+{
+j = i+1;
+row = i * DHCPDynPara[1];
+document.write('<tr align="center"><td >' + j + '</td>');
+document.write('<td >' + DHCPDynList[row] + '</td>');
+document.write('<td >' + DHCPDynList[row+1] + '</td>');
+document.write('<td >' + DHCPDynList[row+2] + '</td>');
+if (DHCPDynList[row+3] != "Permanent" )
+document.write('<td >' + DHCPDynList[row+3] + '</TD></TR>');
+else
+document.write('<td >永 久</TD></TR>');
+}
+document.write('</table></TD></TR>');
+}
+else	{
+document.write('<TR><TD class=info1>当前客户端列表为空</TD></TR>');}
+</script>
+</td><tr>
+</table>
+<!--内容结束-->
+</td><td class="vline" rowspan="15"><br></td></tr>
+<tr><td class="hline"><img src="/images/empty.gif" width="1" height="1"></td></tr>
+<tr><td height="30" class="tail">
+&nbsp;<input name="Refresh" type="submit" class="button" value="刷 新">
+</td></tr><tr><td class="hline"><img src="/images/empty.gif" width="1" height="1"></td>
+</tr></table></td></tr></table>
+</form></center></body><head><meta http-equiv="pragma" content="no-cache"></head></html>

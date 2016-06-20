@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
+<SCRIPT language="javascript" src="../dynaform/common.js"
+	type="text/javascript"></SCRIPT>
+<script type="text/javascript">
+	window.onload = function() {
+		tabs.set("tab_menu", "tab_content");
+	}
+</script>
+</head>
+<body>
+
+<CENTER>
+		<FORM action="StatusRpm.htm" enctype="multipart/form-data"
+			method="get">
+			<TABLE width="702" border="0" cellpadding="0" cellspacing="0"
+				class="space">
+				<TR>
+					<TD width="7" class="title"><IMG src="../images/arc.gif"
+						width="7" height="24"></TD>
+					<TD width="695" align="left" valign="middle" class="title">OSPF全局配置</TD>
+				</TR>
+				<TR>
+					<TD colspan="2">
+						<div id="tab_menu">
+							<!--tag标题-->
+							<ul id="nav">
+								<li><a href="#" class="selected">全局OSPF</a></li>
+								<li><a href="#" >重分发控制</a></li>
+								<div style="clear: both"></div>
+							</ul>
+							<!--二级菜单-->
+							<div id="tab_content">
+								<div class="tag" style="display: block">
+
+									<TABLE width="702" border="0" cellspacing="0"
+										cellpadding="0">
+										<TR>
+											<TD width="700" >
+												<TABLE width="600" border="0" align="center" class="space">
+													<TR>
+														<TD width="100">开启OSPF</TD>
+														<TD><input name="linkMode" type="checkbox" value="0"></TD>
+													</TR>
+													<TR>
+														<TD>路由器ID</TD>
+														<TD><input type="text" value="192.1.1.1"></></TD>
+													</TR>
+													<TR>
+														<TD>开启路由重分布</TD>
+														<TD><input name="linkMode" type="checkbox" value="0"></TD>
+													</TR>
+													<TR>
+														<TD>重分布静态路由</TD>
+														<TD><input name="linkMode" type="checkbox" value="0"></TD>
+													</TR>
+													<TR>
+														<TD>重分布缺省路由</TD>
+														<TD><input name="linkMode" type="checkbox" value="0"></TD>
+													</TR>
+													<tr>
+														<td height="30" align="center" colspan="10">&nbsp; <input name="Save" type="submit" class="button"
+															id="Submit" value="提 交" onClick="return doSubmit();">
+														</td>
+													</tr>
+												</TABLE>
+											</TD>
+										</TR>
+										
+									</TABLE>
+								</div>
+								<div class="tag" style="display: none">这是TAB切换效果区域2</div>
+							</div>
+						</div>
+					
+					</TD>
+				</TR>
+			</TABLE>
+		</FORM>
+	</CENTER>
+
+
+
+	
+</body>
+</html>

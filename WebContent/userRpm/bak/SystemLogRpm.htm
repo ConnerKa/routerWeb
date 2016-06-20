@@ -1,0 +1,375 @@
+
+<SCRIPT language="javascript" type="text/javascript">
+var syslogWebConf = new Array(
+0, 7, 0, 1,
+0,0 );
+</SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+var logList = new Array(
+"Jun 4 18:56:12	DHCP NOTICE DHCPS:Send ACK to 192.168.1.105",
+"Jun 4 18:56:12	DHCP NOTICE DHCPS:Recv REQUEST from 0C:1D:AF:5A:5F:CE",
+"Jun 4 18:56:09	DHCP NOTICE DHCPS:Send ACK to 192.168.1.103",
+"Jun 4 18:56:09	DHCP NOTICE DHCPS:Recv REQUEST from B0:E2:35:D7:4D:E2",
+"Jun 4 18:53:52	DHCP NOTICE DHCPS:Send ACK to 192.168.1.102",
+"Jun 4 18:53:52	DHCP NOTICE DHCPS:Recv REQUEST from 7C:7A:91:C9:CD:59",
+"Jun 4 18:51:22	DHCP NOTICE DHCPS:Send ACK to 192.168.1.101",
+"Jun 4 18:51:22	DHCP NOTICE DHCPS:Recv REQUEST from 88:E3:AB:B7:2F:26",
+"Jun 4 18:51:22	DHCP NOTICE DHCPS:Send OFFER with ip 192.168.1.101",
+"Jun 4 18:51:22	DHCP NOTICE DHCPS:Recv DISCOVER from 88:E3:AB:B7:2F:26",
+"Jun 4 18:50:31	DHCP NOTICE DHCPS:Send ACK to 192.168.1.106",
+"Jun 4 18:50:31	DHCP NOTICE DHCPS:Recv REQUEST from F0:F6:1C:B6:02:7B",
+"Jun 4 18:46:08	DHCP NOTICE DHCPS:Send ACK to 192.168.1.100",
+"Jun 4 18:46:08	DHCP NOTICE DHCPS:Recv REQUEST from 20:A2:E4:5B:2C:16",
+"Jun 4 18:28:47	DHCP NOTICE DHCPS:Send ACK to 192.168.1.107",
+"Jun 4 18:28:47	DHCP NOTICE DHCPS:Recv REQUEST from 74:81:14:5B:93:D1",
+"Jun 4 18:08:47	DHCP NOTICE DHCPS:Recv INFORM from 7C:7A:91:C9:CD:59",
+"Jun 4 17:58:43	DHCP NOTICE DHCPS:Send ACK to 192.168.1.101",
+"Jun 4 17:58:43	DHCP NOTICE DHCPS:Recv REQUEST from 88:E3:AB:B7:2F:26",
+"Jun 4 17:58:35	DHCP NOTICE DHCPS:Send ACK to 192.168.1.105",
+"Jun 4 17:58:35	DHCP NOTICE DHCPS:Recv REQUEST from 0C:1D:AF:5A:5F:CE",
+"Jun 4 17:58:31	DHCP NOTICE DHCPS:Send ACK to 192.168.1.103",
+"Jun 4 17:58:31	DHCP NOTICE DHCPS:Recv REQUEST from B0:E2:35:D7:4D:E2",
+"Jun 4 17:56:45	DHCP NOTICE DHCPS:Recv INFORM from 7C:7A:91:C9:CD:59",
+"Jun 4 17:54:00	DHCP NOTICE DHCPS:Recv INFORM from 7C:7A:91:C9:CD:59",
+"Jun 4 17:53:53	DHCP NOTICE DHCPS:Send ACK to 192.168.1.102",
+"Jun 4 17:53:53	DHCP NOTICE DHCPS:Recv REQUEST from 7C:7A:91:C9:CD:59",
+"Jun 4 17:53:53	DHCP NOTICE DHCPS:Send OFFER with ip 192.168.1.102",
+"Jun 4 17:53:52	DHCP NOTICE DHCPS:Recv DISCOVER from 7C:7A:91:C9:CD:59",
+"Jun 4 17:50:31	DHCP NOTICE DHCPS:Send ACK to 192.168.1.106",
+"Jun 4 17:50:31	DHCP NOTICE DHCPS:Recv REQUEST from F0:F6:1C:B6:02:7B",
+"Jun 4 17:28:47	DHCP NOTICE DHCPS:Send ACK to 192.168.1.107",
+"Jun 4 17:28:47	DHCP NOTICE DHCPS:Recv REQUEST from 74:81:14:5B:93:D1",
+"Jun 4 17:19:00	DHCP NOTICE DHCPS:Send ACK to 192.168.1.100",
+"Jun 4 17:19:00	DHCP NOTICE DHCPS:Recv REQUEST from 20:A2:E4:5B:2C:16",
+"Jun 4 17:01:07	DHCP NOTICE DHCPS:Send ACK to 192.168.1.101",
+"Jun 4 17:01:07	DHCP NOTICE DHCPS:Recv REQUEST from 88:E3:AB:B7:2F:26",
+"Jun 4 17:00:58	DHCP NOTICE DHCPS:Send ACK to 192.168.1.105",
+"Jun 4 17:00:58	DHCP NOTICE DHCPS:Recv REQUEST from 0C:1D:AF:5A:5F:CE",
+"Jun 4 17:00:54	DHCP NOTICE DHCPS:Send ACK to 192.168.1.103",
+"Jun 4 17:00:54	DHCP NOTICE DHCPS:Recv REQUEST from B0:E2:35:D7:4D:E2",
+"Jun 4 16:28:08	DHCP NOTICE DHCPS:Send ACK to 192.168.1.100",
+"Jun 4 16:28:08	DHCP NOTICE DHCPS:Recv REQUEST from 20:A2:E4:5B:2C:16",
+"Jun 4 16:28:03	DHCP NOTICE DHCPS:Send ACK to 192.168.1.106",
+"Jun 4 16:28:03	DHCP NOTICE DHCPS:Recv REQUEST from F0:F6:1C:B6:02:7B",
+"Jun 4 16:06:18	DHCP NOTICE DHCPS:Send ACK to 192.168.1.107",
+"Jun 4 16:06:18	DHCP NOTICE DHCPS:Recv REQUEST from 74:81:14:5B:93:D1",
+"Jun 4 16:05:35	DHCP NOTICE DHCPS:Send ACK to 192.168.1.100",
+"Jun 4 16:05:35	DHCP NOTICE DHCPS:Recv REQUEST from 20:A2:E4:5B:2C:16",
+"Jun 4 16:03:31	DHCP NOTICE DHCPS:Send ACK to 192.168.1.101",
+"Jun 4 16:03:31	DHCP NOTICE DHCPS:Recv REQUEST from 88:E3:AB:B7:2F:26",
+"Jun 4 16:03:23	DHCP NOTICE DHCPS:Send ACK to 192.168.1.105",
+"Jun 4 16:03:23	DHCP NOTICE DHCPS:Recv REQUEST from 0C:1D:AF:5A:5F:CE",
+"Jun 4 16:03:17	DHCP NOTICE DHCPS:Send ACK to 192.168.1.103",
+"Jun 4 16:03:17	DHCP NOTICE DHCPS:Recv REQUEST from B0:E2:35:D7:4D:E2",
+"Jun 4 15:06:18	DHCP NOTICE DHCPS:Send ACK to 192.168.1.107",
+"Jun 4 15:06:17	DHCP NOTICE DHCPS:Recv REQUEST from 74:81:14:5B:93:D1",
+"Jun 4 15:05:55	DHCP NOTICE DHCPS:Send ACK to 192.168.1.101",
+"Jun 4 15:05:55	DHCP NOTICE DHCPS:Recv REQUEST from 88:E3:AB:B7:2F:26",
+"Jun 4 15:05:55	DHCP NOTICE DHCPS:Send OFFER with ip 192.168.1.101",
+"Jun 4 15:05:54	DHCP NOTICE DHCPS:Recv DISCOVER from 88:E3:AB:B7:2F:26",
+"Jun 4 15:05:49	PPP NOTICE PPPoE connected",
+"Jun 4 15:05:47	DHCP NOTICE DHCPS:Send ACK to 192.168.1.105",
+"Jun 4 15:05:46	DHCP NOTICE DHCPS:Recv REQUEST from 0C:1D:AF:5A:5F:CE",
+"Jun 4 15:05:42	PPP NOTICE Got a successful dial mode 0.",
+"Jun 4 15:05:42	PPP INFO rcvd [IPCP Ack addr=114.249.219.69 dns1=202.106.46.151 dns3=202.106.195.68]",
+"Jun 4 15:05:42	PPP INFO sent [IPCP Req addr=114.249.219.69 dns1=202.106.46.151 dns3=202.106.195.68]",
+"Jun 4 15:05:42	PPP INFO rcvd [IPCP Nak addr=114.249.219.69 dns1=202.106.46.151 dns3=202.106.195.68]",
+"Jun 4 15:05:42	PPP INFO sent [IPCP Ack addr=114.249.208.1]",
+"Jun 4 15:05:42	PPP INFO rcvd [IPCP Req addr=114.249.208.1]",
+"Jun 4 15:05:42	PPP INFO sent [IPCP Req addr=0.0.0.0 dns1=0.0.0.0 dns3=0.0.0.0]",
+"Jun 4 15:05:42	PPP INFO rcvd [PAP AuthAck \"Authentication success,Welcome!\"]",
+"Jun 4 15:05:42	PPP INFO sent [LCP code=0xc]",
+"Jun 4 15:05:42	PPP INFO sent [PAP AuthReq user=\"990000122330\" password=(hidden)]",
+"Jun 4 15:05:42	DHCP NOTICE DHCPS:Send ACK to 192.168.1.100",
+"Jun 4 15:05:42	PPP INFO sent [LCP Ack mru=1492 auth=pap magic=0xfc722361]",
+"Jun 4 15:05:42	PPP INFO rcvd [LCP Req mru=1492 auth=pap magic=0xfc722361]",
+"Jun 4 15:05:41	DHCP NOTICE DHCPS:Recv REQUEST from 20:A2:E4:5B:2C:16",
+"Jun 4 15:05:40	PPP INFO rcvd [LCP Ack mru=1480 magic=0x22295b52]",
+"Jun 4 15:05:40	PPP INFO sent [LCP Req mru=1480 magic=0x22295b52]",
+"Jun 4 15:05:39	DHCP NOTICE DHCPS:Send ACK to 192.168.1.103",
+"Jun 4 15:05:38	DHCP NOTICE DHCPS:Recv REQUEST from B0:E2:35:D7:4D:E2",
+"Jun 4 15:05:37	PPP INFO rcvd [LCP Ack mru=1480 magic=0x22295b52]",
+"Jun 4 15:05:37	PPP INFO sent [LCP Req mru=1480 magic=0x22295b52]",
+"Jun 4 15:05:37	PPP INFO rcvd [PADS sess-id(1692)]",
+"Jun 4 15:05:37	PPP INFO sent [PADR Host-Uniq(0x00000238)]",
+"Jun 4 15:05:37	PPP INFO rcvd [PADO AC-Name:ME60-X16-SD02 AC-MAC:d8:49:0b:b6:8c:cb]",
+"Jun 4 15:05:37	PPP INFO sent [PADI Host-Uniq(0x00000238)]",
+"Jun 4 15:05:36	PPP NOTICE Standard authentication.",
+"Jun 4 15:05:34	DHCP NOTICE DHCPS:Send ACK to 192.168.1.106",
+"Jun 4 15:05:33	DHCP NOTICE DHCPS:Recv REQUEST from F0:F6:1C:B6:02:7B",
+"Jun 4 15:05:03	安全 INFO RTSP ALG enabled",
+"Jun 4 15:05:03	安全 INFO H323 ALG enabled",
+"Jun 4 15:05:03	安全 INFO TFTP ALG enabled",
+"Jun 4 15:05:03	安全 INFO FTP ALG enabled",
+"Jun 4 15:05:02	安全 INFO IPSEC Passthrough enabled",
+"Jun 4 15:05:02	安全 INFO L2TP Passthrough enabled",
+"Jun 4 15:05:02	安全 INFO PPTP Passthrough enabled",
+"Jun 4 15:05:02	DHCP NOTICE DHCP server started",
+"Jun 4 15:04:59	其他 INFO System started",
+0,0 );
+</SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+var logExpList = new Array(
+0,0 );
+</SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+var logWanList = new Array(
+"W1 = PPPoE : W = 114.249.219.69 : M = 255.255.255.255 : G = 114.249.219.69",
+0,0 );
+</SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+var logInf = new Array(
+"Time = 2016-06-04 19:10:25 14729s",
+"H-Ver = WR840N v1 00000000 : S-Ver = 3.12.11 Build 110314 Rel.36812n ",
+"L = 192.168.1.1 : M = 255.255.255.0",
+"",
+0,0 );
+</SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+var logTypeArray = new Array(
+" 全部 ",
+" PPP ",
+" DHCP ",
+" 无线 ",
+" 动态DNS ",
+" 安全 ",
+" 过滤 ",
+" 网络存储 ",
+" 其他 ",
+0,0 );
+</SCRIPT>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<HTML>
+<HEAD><TITLE>TL-WR840N</TITLE>
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
+<LINK href="/dynaform/css_main.css" rel=stylesheet type="text/css">
+<SCRIPT language="javascript" src="/dynaform/common.js" type="text/javascript"></SCRIPT>
+<SCRIPT language="javascript" type="text/javascript"><!--
+if(window.parent == window){window.location.href="http://192.168.1.1";}
+function Click(){ return false;}
+document.oncontextmenu=Click;
+//--></SCRIPT>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<SCRIPT LANGUAGE="JAVASCRIPT"><!--
+var LP=location.pathname;
+
+var logPerPage = 30;
+
+function doSubmit(){
+if(confirm("确认清除所有日志内容吗？")){
+return true;}
+else {return false;}}
+function doClick(){
+location.href = LP + "?logType=" + document.getElementById("logType").value + "&logLevel=" + document.getElementById("logLevel").value + "&pageNum="+ curPage;
+}
+
+
+function doTypeChange(obj, i)
+{
+obj.blur();
+var j = document.getElementById("logLevel").value;
+location.href = LP + "?logType=" + i + "&logLevel=" + j + "&pageNum=1";
+return true;
+}
+
+function doLevelChange(obj, i)
+{
+obj.blur();
+var j = document.getElementById("logType").value;
+location.href = LP + "?logLevel=" + i + "&logType=" + j + "&pageNum=1";
+return true;
+}
+
+function doPage(j)
+{
+location.href = LP + "?logType=" + document.getElementById("logType").value + "&logLevel=" + document.getElementById("logLevel").value + "&pageNum="+j;
+return true;
+}
+//--></SCRIPT></HEAD>
+<BODY><CENTER>
+<FORM ACTION="SystemLogRpm.htm" ENCTYPE="multipart/form-data" METHOD="get" ONSUBMIT="return doSubmit();">
+<TABLE WIDTH="740" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+<TD WIDTH="7" CLASS="title"><IMG SRC="/images/arc.gif" WIDTH="7" HEIGHT="24"></td>
+<TD WIDTH="733" ALIGN="left" VALIGN="middle" CLASS="title">系统日志</td>
+</TR>
+<TR><TD COLSPAN="2" ALIGN="left"><TABLE WIDTH="740" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+<TD CLASS="vline" ROWSPAN="58" WIDTH="1"><BR></TD>
+<TD WIDTH="738"><TABLE WIDTH="698" BORDER="0" ALIGN="center" CELLSPACING="0" CELLPADDING="0" >
+<TR>
+<TD>
+<TABLE BORDER="0" WIDTH="698" CELLSPACING="0" CELLPADDING="0" CLASS="space">
+<TR>
+<TD>本页显示路由器的系统日志。用户可以分类、分级查看其中部分日志，并且可以保存日志内容或将日志内容通过邮件发送。</TD>
+</TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR>
+<TD>&nbsp;&nbsp;通过邮件定时发送日志功能：
+<SCRIPT LANGUAGE="JAVASCRIPT">
+if (syslogWebConf[2] == 0)
+{
+document.write(' &nbsp;&nbsp;<b>未启用</b>');
+}
+else
+{
+document.write(' &nbsp;&nbsp;<b>已启用</b>');
+}
+</SCRIPT>
+&nbsp;&nbsp;<INPUT NAME="AutoMail" TYPE="button" CLASS="button" VALUE="邮件发送设置" ONCLICK="location.href='AutoEmailRpm.htm';" ONMOUSEWHEEL=disabled>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD>
+<TABLE BORDER="0" WIDTH="698" CELLSPACING="0" CELLPADDING="0" CLASS="space">
+<TR>
+<TD width="250">&nbsp;&nbsp;选择要查看的日志类型:&nbsp<SELECT NAME="logType" ID="logType" CLASS="list" TABINDEX="-1" ONCHANGE="doTypeChange(this, this.value)" ONMOUSEWHEEL="return false;" ONKEYDOWN="return false;">
+<script language="javascript">
+for (var i = 0; i < logTypeArray.length - 2; i++)
+{
+document.write('<OPTION VALUE=' + i +'>'+logTypeArray[i]+'</OPTION>');
+}
+</script>
+</SELECT>
+</TD>
+<TD>&nbsp;&nbsp;选择要查看的日志等级:&nbsp<SELECT NAME="logLevel" ID="logLevel" CLASS="list" TABINDEX="-1" ONCHANGE="doLevelChange(this, this.value)" ONMOUSEWHEEL="return false;" ONKEYDOWN="return false;">
+<OPTION VALUE=3> ERROR </OPTION>
+<OPTION VALUE=4> WARNING </OPTION>
+<OPTION VALUE=5> NOTICE </OPTION>
+<OPTION VALUE=6> INFO </OPTION>
+<OPTION VALUE=7> ALL </OPTION>
+</SELECT></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+var maxRow = 0;
+var i;
+var j;
+var content;
+var imax;
+document.write('<TR><TD WIDTH="698" ALIGN="center"> <TABLE BORDER="1" ALIGN="center" WIDTH="698" CELLSPACING="0" CELLPADDING="0">');
+if((logList.length-2)>=1)
+{
+maxRow = logList.length-2;
+imax = (syslogWebConf[3] * logPerPage ) > maxRow ? maxRow : (syslogWebConf[3] * logPerPage);
+document.write('<TR><TD ALIGN="center" width="32">索引 </TD><TD ALIGN="center" width="102">时间</TD><TD ALIGN="center" width="60">类型</TD><TD ALIGN="center" width="50">级别</TD><TD ALIGN="center">日&nbsp;志&nbsp;内&nbsp;容 </TD></TR>');
+for(i = (syslogWebConf[3] - 1)*logPerPage; i < imax; i++)
+{
+document.write('<TR><TD ALIGN="center">'+(maxRow-i)+'</TD>');
+start = 0;
+end = 0;
+for (j = 0; j < 3; j++)
+{
+end = logList[i].indexOf("\t", start);
+//alert(end);
+if (end < 0)
+{	document.write('<TD STYLE="word-break:break-all">无分类 </TD>');
+break;
+}
+content = logList[i].substring(start, end);
+start = end + 1;
+document.write('<TD STYLE="padding:0 0 0 5;word-break:break-all">'+content+'</TD>');
+}
+//	content = logList[i].substring(start);
+document.write('<TD STYLE="padding:0 0 0 5;word-break:break-all">');
+while(1)
+{
+content = logList[i].substr(start, 72)
+document.write(content + '<br>');
+start += 72;
+if (start >= logList[i].length)
+break;
+}
+document.write('</TD></TR>');
+}
+}
+if((logExpList.length-2)>=1)
+{
+maxRow = logExpList.length-2;
+for(i = 0;i < maxRow;i++)
+{
+document.write('<TR><TD COLSPAN ="2">'+logExpList[i]+'</TD></TR>');
+};
+}
+if((logList.length-2)<1 && (logExpList.length-2)<1)
+{
+document.write('<TR><TD ALIGN="center" COLSPAN="2">日志信息列表为空 </TD></TR>');
+}
+document.write('</TABLE></TD></TR>');
+document.write('<TR HEIGHT="10"><TD></TD></TR>');
+document.write('<TR><TD WIDTH="698"><TABLE BORDER="0" >');
+document.write('<TR><TD COLSPAN=2>' + logInf[0]+'</TD></TR>');
+document.write('<TR><TD COLSPAN=2>' + logInf[1]+'</TD></TR>');
+document.write('<TR><TD COLSPAN=2>' + logInf[2]+'</TD></TR>');
+if((logWanList.length-2)>=1)
+{
+maxRow = logWanList.length-2;
+for(i=0;i<maxRow;i++)
+{
+document.write('<TR><TD COLSPAN="2">' + logWanList[i]+'</TD></TR>');
+}
+}
+document.write('<TR><TD COLSPAN="2">' + logInf[3]+'</TD></TR>');
+document.write('</TABLE></TD></TR>');
+
+</SCRIPT>
+</TABLE></TD>
+<TD CLASS="vline" ROWSPAN="58" WIDTH="1"><BR></TD>
+</TR>
+
+<TR><TD><TABLE width="698" align="center" border="0" cellpadding="0" cellspacing="0" class="space">
+<TR><TD>
+&nbsp;<INPUT NAME="Refresh" TYPE="button" CLASS="button" VALUE="刷 新" ONCLICK="doClick();" ALIGN="left">
+&nbsp;<INPUT NAME="DownLoad" TYPE="button" CLASS="button" VALUE="保存所有日志" ONCLICK="location.href='SystemLog.txt';" ALIGN="left">
+&nbsp;<INPUT NAME="DownLoad" TYPE="button" CLASS="button" VALUE="通过邮件发送" ONCLICK="this.disabled = true; location.href='SystemLogRpm.htm?doMailLog=2';" ALIGN="left">
+&nbsp;<INPUT NAME="ClearLog" TYPE="submit" CLASS="button" VALUE="清除所有日志" ALIGN="right">
+</TD></TR>
+</TABLE>
+</TD>
+</TR>
+
+<TR><TD CLASS="hline" COLSPAN="3"><IMG SRC="/images/empty.gif" HEIGHT="1"></TD></TR>
+<tr><td CLASS="tail">
+&nbsp;<input name="previous" type="button" class="button" onClick="doPage(prePage);" value="上一页" Disabled>
+&nbsp;<input name="next" type="button" class="button" onClick="doPage(nextPage);" value="下一页" Disabled>
+&nbsp;<span>第</span>
+<select class=list onchange="doPage(document.forms[0].selPage.value);" size="1" name="selPage">
+<script language="JavaScript">
+var maxpageNum = (logList.length - 2 - 1)/logPerPage + 1;
+var pIndex = 1;
+do
+{
+document.write("<option value='" + pIndex + "' selected>"+ pIndex +"</option>");
+}while(++pIndex <= maxpageNum);
+</script>
+</select>
+<span>页</span>
+&nbsp; <input name="Page" type="hidden" value="1">
+&nbsp;<INPUT NAME="Help" TYPE="button" CLASS="button" VALUE="帮 助" ALIGN="right" ONCLICK="location.href='/help/SystemLogHelpRpm.htm';">
+</td></tr>
+<TR><TD CLASS="hline" COLSPAN="3"><IMG SRC="/images/empty.gif" WIDTH="1" HEIGHT="1"></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</FORM>
+</CENTER></BODY>
+
+<HEAD><META HTTP-EQUIV="pragma" CONTENT="no-cache"></HEAD></HTML>
+<SCRIPT LANGUAGE="JAVASCRIPT">
+document.forms[0].logType.value = syslogWebConf[0];
+document.forms[0].logLevel.value = syslogWebConf[1];
+var curPage = syslogWebConf[3];
+var prePage = (curPage == 1) ? 1 : curPage - 1;
+var nextPage = (curPage + 1 > maxpageNum) ? curPage : curPage + 1;
+document.forms[0].previous.disabled = (curPage == 1) ? true : false;
+document.forms[0].next.disabled = (curPage == nextPage) ? true : false;
+document.forms[0].selPage.value = curPage;
+</SCRIPT>

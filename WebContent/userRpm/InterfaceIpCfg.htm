@@ -1,0 +1,220 @@
+
+<SCRIPT language="javascript" type="text/javascript">
+	var interfaceOne = new Array(
+			"LAN口", "192.168.2.1", "255.255.255.0",
+			"WAN口1", "192.168.10.1", "255.255.255.0",
+			"WAN口2", "192.168.20.1", "255.255.255.0"
+			);
+	var interfaceTwo = new Array(
+			"E1_1", "192.168.1.12", "255.255.255.0"
+			);
+</SCRIPT>
+
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
+<LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
+<SCRIPT language="javascript" src="../dynaform/common.js" type="text/javascript"></SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+
+</SCRIPT>
+
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<body>
+	<center>
+		<form enctype="multipart/form-data" method="get">
+			<table width="480" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="7" class="title"><img src="../images/arc.gif" width="7" height="24"></td>
+					<td width="470" align="left" valign="middle" class="title">接口IP配置</td>
+				</tr>
+				<tr>
+					<td colspan="2"><table width="480" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="vline" rowspan="15"><br></td>
+								<td width="478">
+									<table width="440" border="0" align="center" cellpadding="0" cellspacing="0" class="space">
+										<tr>
+											<td align="center" width="440"><SCRIPT language=JavaScript>
+												var LP = location.pathname;
+												function DoSubmit_firstTable(interfaceName,index) {
+													var firstInputElement=document.getElementById("firstInput_"+index);
+													var secondInputElement=document.getElementById("secondInput_"+index);
+													if(!is_ipaddr(firstInputElement.value,interfaceName)){
+														firstInputElement.focus();
+														firstInputElement.select();
+														return false;
+													}
+													if(!is_maskaddr(secondInputElement.value,interfaceName)){
+														secondInputElement.focus();
+														secondInputElement.select();
+														return false;
+													}
+													
+													location.href = LP
+															+ "?reserve=1&ip="
+															+ b + "&mask=" + a;
+													return true;
+												}
+												function DoSubmit_secondTable(interfaceName,index) {
+													var firstInputElement=document.getElementById("firstInput_"+index);
+													var secondInputElement=document.getElementById("secondInput_"+index);
+													if(!is_ipaddr(firstInputElement.value,interfaceName+" 本端")){
+														firstInputElement.focus();
+														firstInputElement.select();
+														return false;
+													}
+													if(!is_ipaddr(secondInputElement.value,interfaceName+" 对端")){
+														secondInputElement.focus();
+														secondInputElement.select();
+														return false;
+													}
+													
+													location.href = LP
+															+ "?reserve=1&ip="
+															+ b + "&mask=" + a;
+													return true;
+												}
+												function DoDelete(a, b, c) {
+													location.href = LP
+															+ "?delete=1&ip="
+															+ b + "&mac=" + a
+															+ "&lock=" + c;
+													return true;
+												}
+												
+												// init page:
+												// LAN,WAN1,WAN2 
+												document
+														.write('<TR><TD><table border=1 align="center" cellpadding="0" cellspacing="0" class="space">');
+												document
+														.write('<TR align="center"><TD width="100" class=ListTC1>网络接口</TD>'
+																+ '<td width="120" class=ListTC2>IP地址</td>'
+																+ '<TD width="120" class=ListTC2>掩码</TD>'
+																+ '<TD width="120" class=ListTC2>操作</TD> '
+																+ '</TR>');
+												var i=0;
+												var index =0;
+												if(interfaceOne && interfaceOne.length>0){
+													
+												for(i=0;i<interfaceOne.length;i=i+3){
+													document
+													.write('<tr align="center"><td class=ListC1>'
+															+ interfaceOne[i]
+															+ '</td>');
+													document
+													.write('<td class=ListC2>'
+															+'<input name="ipCfg" type="text" class="text" id="firstInput_'+index+'" value="'
+															+interfaceOne[i + 1]+'" size="15" maxlength="15">'
+															+ '</td>');
+													document
+													.write('<td class=ListC2>'
+															+'<input name="maskCfg" type="text" class="text" id="secondInput_'+index+'" value="'
+															+interfaceOne[i + 2]+'" size="15" maxlength="15">'
+															+ '</td>');
+													document
+													.write('<td class=ListC2 nowrap>'
+															+ '<INPUT class=button type=button value=确定 '
+															+ 'onclick=DoSubmit_firstTable("'
+															+ interfaceOne[i]
+															+ '",'
+															+ index+');'
+															+ ' name=reserve>'
+															+ '&nbsp;'
+															+ '<INPUT class=button type=button value=删除 '
+															+ 'onclick=DoDelete("'
+															+ interfaceTwo[i + 1]
+															+ '","'
+															+ interfaceTwo[i + 2]
+															+ '","'
+															+ interfaceTwo[i]
+															+ '");'
+															+ ' name=delete>'
+															+ '</TD>');
+													index++;
+												}
+												}else {
+													document
+													.write('<TR align="center"><TD class=info1 colspan="5">当前列表为空</TD></TR>');
+												}
+												document
+														.write('</table></TD></TR>');
+												
+												// IE1_1
+												document
+														.write('<TR><TD><table border=1 align="center" cellpadding="0" cellspacing="0" class="space">');
+												document
+														.write('<TR align="center"><TD width="100" class=ListTC1>网络接口</TD>'
+																+ '<td width="120" class=ListTC2>本端地址</td>'
+																+ '<TD width="120" class=ListTC2>对端地址</TD>'
+																+ '<TD width="120" class=ListTC2>操作</TD> '
+																+ '</TR>');
+												var i=0;
+												if(interfaceTwo && interfaceTwo.length>0){
+												for(i=0;i<interfaceTwo.length;i=i+3){
+													
+													document
+													.write('<tr align="center"><td class=ListC1>'
+															+ interfaceTwo[i]
+															+ '</td>');
+													document
+													.write('<td class=ListC2>'
+															+'<input name="ipCfg" type="text" class="text" id="firstInput_'+index+'" value="'
+															+interfaceTwo[i + 1]+'" size="15" maxlength="15">'
+															+ '</td>');
+													document
+													.write('<td class=ListC2>'
+															+'<input name="maskCfg" type="text" class="text" id="secondInput_'+index+'" value="'
+															+interfaceTwo[i + 2]+'" size="15" maxlength="15">'
+															+ '</td>');
+													document
+													.write('<td class=ListC2 nowrap>'
+															+ '<INPUT class=button type=button value=确定 '
+															+ 'onclick=DoSubmit_secondTable("'
+															+ interfaceTwo[i]
+															+ '","'
+															+ index
+															+ '");'
+															+ ' name=reserve>'
+															+ '&nbsp;'
+															+ '<INPUT class=button type=button value=删除 '
+															+ 'onclick=DoDelete("'
+															+ interfaceTwo[i + 1]
+															+ '","'
+															+ interfaceTwo[i + 2]
+															+ '","'
+															+ interfaceTwo[i]
+															+ '");'
+															+ ' name=delete>'
+															+ '</TD>');
+													index++;
+												}
+												}else {
+													document
+													.write('<TR align="center"><TD class=info1 colspan="5">当前列表为空</TD></TR>');
+												}
+												document
+														.write('</table></TD></TR>');
+												
+											</script></td>
+										<tr>
+									</table>
+								</td>
+								<td class="vline" rowspan="15"><br></td>
+							</tr>
+							<tr>
+								<td class="hline"><img src="../images/empty.gif" width="1" height="1"></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+</head>
+</html>

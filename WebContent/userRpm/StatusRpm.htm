@@ -1,0 +1,167 @@
+
+<SCRIPT language="javascript" type="text/javascript">
+	var statusPara = new Array(20000, 
+			"INTEL IKP425 NPE (533) MHZ",//cpuinfo
+			"123456", //snumber
+			"Total Memery Size 64 Bytes",//meminfo
+			"ACYIVE",//linkstat
+			"5%",//cpuusage 
+			"6%",//memusage
+			"WR840N v1 00000000"//version
+			);
+</SCRIPT>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<HTML>
+<HEAD>
+<TITLE>TL-WR840N</TITLE>
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
+<LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
+<SCRIPT language="javascript" src="../dynaform/common.js"
+	type="text/javascript"></SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+<!--
+	/* if (window.parent == window) {
+	window.location.href = "http://192.168.1.1";
+	} */
+	function Click() {
+		return false;
+	}
+	//document.oncontextmenu = Click;
+//-->
+</SCRIPT>
+<SCRIPT language="javascript" src="../dynaform/custom.js"
+	type="text/javascript"></SCRIPT>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT language="JavaScript">
+<!--
+	function doRefresh() {
+		location.href = "./StatusRpm.htm";
+		return true;
+	}
+	function doConnect(n) {
+		var s = "&wan=" + n;
+		location.href = "./StatusRpm.htm?Connect=连 接" + s;
+		return true;
+	}
+	function doDisConnect(n) {
+		var s = "&wan=" + n;
+		location.href = "/userRpm/StatusRpm.htm?Disconnect=断 线" + s;
+		return true;
+	}
+	function doRenew(n) {
+		var s = "&wan=" + n;
+		location.href = "/userRpm/StatusRpm.htm?RenewIp=更 新" + s;
+		return true;
+	}
+	function doRelease(n) {
+		var s = "&wan=" + n;
+		location.href = "/userRpm/StatusRpm.htm?ReleaseIp=释 放" + s;
+		return true;
+	}
+	function doSecRenew(n) {
+		var s = "&wan=" + n;
+		location.href = "StatusRpm.htm?RenewSecIp=1" + s;
+		return true;
+	}
+	function doSecRelease(n) {
+		var s = "&wan=" + n;
+		location.href = "StatusRpm.htm?ReleaseSecIp=1" + s;
+		return true;
+	}
+	function doLogin(n) {
+		var s = "&wan=" + n;
+		location.href = "/userRpm/StatusRpm.htm?Login=登 录" + s;
+		return true;
+	}
+	function doLogout(n) {
+		var s = "&wan=" + n;
+		location.href = "/userRpm/StatusRpm.htm?Logout=退 出" + s;
+		return true;
+	}
+	function doFialDialReasonHelp(url) {
+		location.href = "/help/" + url;
+		return true;
+	}
+	
+	-->
+</SCRIPT>
+</HEAD>
+<BODY>
+	<CENTER>
+		<FORM action="StatusRpm.htm" enctype="multipart/form-data"
+			method="get">
+			<!-- // LAN -->
+			<TABLE width="702" border="0" cellpadding="0" cellspacing="0"
+				class="space">
+				<TR>
+					<TD width="7" class="title"><IMG src="../images/arc.gif"
+						width="7" height="24"></TD>
+					<TD width="695" align="left" valign="middle" class="title">设备系统信息</TD>
+				</TR>
+				<TR>
+					<TD colspan="2"><TABLE width="702" border="0" cellspacing="0"
+							cellpadding="0">
+							<TR>
+								<TD width="1" rowspan="15" class="vline"><BR></TD>
+								<TD width="700" height="50">
+									<TABLE width="600" border="0" align="center" class="space">
+										<TR>
+											<TD width="100">CPU信息：</TD>
+											<TD><DIV id="cpuinfo">-</DIV></TD>
+										</TR>
+										<TR>
+											<TD>设备序列号：</TD>
+											<TD><DIV id="snumber">-</DIV></TD>
+										</TR>
+										<TR>
+											<TD>内存信息：</TD>
+											<TD><DIV id="meminfo">-</DIV></TD>
+										</TR>
+										<TR>
+											<TD>接口LINK状态：</TD>
+											<TD><DIV id="linkstat">-</DIV></TD>
+										</TR>
+										<TR>
+											<TD>CPU占用率：</TD>
+											<TD><DIV id="cpuusage">-</DIV></TD>
+										</TR>
+										<TR>
+											<TD>内存占用率：</TD>
+											<TD><DIV id="memusage">-</DIV></TD>
+										</TR>
+										<TR>
+											<TD>版本号：</TD>
+											<TD><DIV id="version">-</DIV></TD>
+										</TR>
+									</TABLE>
+								</TD>
+								<TD width="1" rowspan="15" class="vline"><BR></TD>
+							</TR>
+							<TR>
+								<TD class="hline"><IMG src="../images/empty.gif" width="1"
+									height="1"></TD>
+							</TR>
+						</TABLE></TD>
+				</TR>
+			</TABLE>
+		</FORM>
+	</CENTER>
+</BODY>
+<HEAD>
+<META http-equiv="pragma" content="no-cache">
+</HEAD>
+</HTML>
+<SCRIPT language="JavaScript">
+<!--
+	var timeout = statusPara[0];
+	window.setTimeout("doRefresh()", timeout);
+	document.getElementById("cpuinfo").innerHTML = statusPara[1];
+	document.getElementById("snumber").innerHTML = statusPara[2];
+	document.getElementById("meminfo").innerHTML = statusPara[3];
+	document.getElementById("linkstat").innerHTML = statusPara[4];
+	document.getElementById("cpuusage").innerHTML = statusPara[5];
+	document.getElementById("memusage").innerHTML = statusPara[6];
+	document.getElementById("version").innerHTML = statusPara[7];
+	-->
+</SCRIPT>

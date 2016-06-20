@@ -1,0 +1,178 @@
+
+<SCRIPT language="javascript" type="text/javascript">
+    var lanPara = new Array("192.168.3.0", "255.255.255.0","192.168.10.2","10");
+</SCRIPT>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<HTML>
+<HEAD>
+<TITLE>LTY15</TITLE>
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
+<LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
+<SCRIPT language="javascript" src="../dynaform/common.js"
+    type="text/javascript"></SCRIPT>
+<SCRIPT language="javascript" type="text/javascript">
+<!--
+    /* if (window.parent == window) {
+        window.location.href = "http://192.168.1.1";
+    } */
+    function Click() {
+        return false;
+    }
+    //document.oncontextmenu = Click;
+//-->
+</SCRIPT>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<script language="JavaScript">
+<!--
+    function doSubmit() {
+        if(!is_ipaddr(document.forms[0].loopback.value)){
+            var element = document.forms[0].loopback;
+            if (element) {
+                element.focus();
+                element.select();
+            }
+            return false;
+        }
+        if (document.forms[0].hostname.value == "") {
+            alert("请输入系统主机名！");
+            return false;
+        }
+        if (!is_hostname(document.forms[0].hostname.value,30)) {
+            var element = document.forms[0].hostname;
+            if (element) {
+                element.focus();
+                element.select();
+            }
+            return false;
+        }
+        if (document.forms[0].loopback.value == lanPara[0]
+            &&
+            document.forms[0].hostname.value == lanPara[1]) {
+            return false;
+        }
+        if (!confirm("确定修改？")) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+//-->
+</script>
+</head>
+<body >
+    <center>
+        <form action="HostNameCfg.htm" enctype="multipart/form-data"
+            method="get" onSubmit="return doSubmit();">
+            <table width="702" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="7" class="title"><img src="../images/arc.gif"
+                        width="7" height="24"></td>
+                    <td width="695" align="left" valign="middle" class="title">静态路由配置</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><table width="702" border="0" cellspacing="0"
+                            cellpadding="0">
+                            <tr>
+                                <td class="vline" rowspan="15"><br></td>
+                                <td width="700">
+                                    
+                                    <table width="600" border="0" align="center" class="space"
+                                        cellspacing="2" cellpadding="2">
+                                        <tr>
+                                            <td>目标网络：</td>
+                                            <td colspan="2">
+                                            <input name="targetnet" type="text"
+                                                class="text" id="targetnet" value="" size="30"
+                                                maxlength="30">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>子网掩码：</td>
+                                            <td colspan="2"><input name="subnetmask" type="text"
+                                                class="text" id="subnetmask" value="" size="30"
+                                                maxlength="30">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>下一跳：</td>
+                                            <td colspan="2"><input name="nextnet" type="text"
+                                                class="text" id="nextnet" value="" size="30"
+                                                maxlength="30">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>权值：</td>
+                                            <td colspan="2"><input name="weight" type="text"
+                                                class="text" id="weight" value="" size="30"
+                                                maxlength="30">
+                                            </td>
+                                        </tr>
+                                    </table> <br>
+                                </td>
+                                <td class="vline" rowspan="15"><br></td>
+                            </tr>
+                            <!-- <tr>
+                                <td class="hline"><img src="../images/empty.gif" width="1"
+                                    height="1"></td>
+                            </tr> -->
+                            <tr>
+                                <td height="30" class="tail" align="center">&nbsp;&nbsp;<input name="Save"
+                                    type="submit" class="button" value="添  加"> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hline"><img src="../images/empty.gif" width="1"
+                                    height="1"></td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h4>已经添加的静态路由表</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <div id="staticRountsTable">
+                                    <table>
+                                        <th>
+                                            <td>目标网络</td>
+                                            <td>子网掩码</td>
+                                            <td>下一跳</td>
+                                            <td>权值</td>
+                                            <td>删除</td>
+                                        </th>
+                                        <tr>
+                                            <td>1111</td>
+                                            <td>2222</td>
+                                            <td>3333</td>
+                                            <td>4444</td>
+                                            <td>删除</td>
+                                        </tr>
+                                        <tr>
+                                            <td>目标网络</td>
+                                            <td>子网掩码</td>
+                                            <td>下一跳</td>
+                                            <td>权值</td>
+                                            <td>删除</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                            </tr>
+                            
+                        </table></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+</head>
+</html>
+<script language="JavaScript">
+    document.forms[0].targetnet.value = lanPara[0];
+    document.forms[0].subnetmask.value = lanPara[1];
+    document.forms[0].nextnet.value = lanPara[2];
+    document.forms[0].weight.value = lanPara[3];
+</script>
