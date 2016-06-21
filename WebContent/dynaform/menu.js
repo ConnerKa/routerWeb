@@ -1,8 +1,8 @@
-//  Array(url,display,display level,menu_name)
-//	url:	url to visite when click on this menu item. it's not full path, but only filename.
+//  Array(fileName,ifDisplay,level,menu_name)
+//	fileName:	fileName to visite when click on this menu item. it's not full path, but only filename.
 //		if it's not null, must be one and only; else if it's null, that means it has branches, and the actual url is the one of its first visitable branches.
-//	display: must be 0. 
-//	directory level: 0: directory has no branches;  1: directory level 1;  2:level 2;   and so on
+//	ifDisplay: 0:not display, 1: display. 
+//	 level: 0: directory has no branches;  1: directory level 1;  2:level 2;   and so on
 // menu_name : string in str_menu.js
 var menuList = new Array(
 	"StatusRpm", 					1,		0,  		str_menu.status,
